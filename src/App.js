@@ -45,14 +45,15 @@ function App() {
     const account = async () => {
       const getaccount = await webapi.web3.eth.getAccounts();
       setAccount(getaccount[0]);
-      const balance = await webapi.web3.eth.getBalance(String(account));
-      console.log(balance);
+      // const balance = await webapi.web3.eth.getBalance(String(account));
+      // console.log(balance);
     };
     webapi.web3 && account();
   }, [webapi.web3]);
 
   return (
     <>
+      <div>topa </div>
       <div className="mainfile">
         <div className="text">Funding</div>
         <div className="balance">Balance: 100ETH</div>
